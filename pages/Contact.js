@@ -7,7 +7,7 @@ const Contact = () => {
                 <div className="col-sm-4 offset-md-4 mt-3">
                     <div className="text-center mb-2 mt-5">
                         <h6 style={{ color: "#64ffda" }}>
-                            04.What's Next? </h6>
+                            04.What`&apos;`s Next? </h6>
                     </div>
                     <div className="text-center">
                         <h1 className='fw-bold fs-1 mb-3' style={{ color: "#ccd6f6" }}>Get In Touch</h1>
