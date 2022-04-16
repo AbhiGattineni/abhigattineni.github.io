@@ -39,7 +39,7 @@ const About = () => {
                             </p>
                         </div>
                         <div className='col-md-6 d-none d-md-block m-sm-auto' style={{ height: "40vmax", width: "30vmax" }}>
-                            <Image src={MyPhoto} alt="Pictute of me" />
+                            <img src={MyPhoto} alt="Pictute of me" />
                         </div>
                     </div>
                 </div >

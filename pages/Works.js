@@ -13,7 +13,7 @@ const Works = () => {
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     <div className="col">
                         <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                            <Image src="/csulb.jfif" className="card-img-top" alt="..." layout='fill' />
+                            <img src="/csulb.jfif" className="card-img-top" alt="..." layout='fill' />
                             <div className="card-body">
                                 <h5 className="card-title">CSULB</h5>
                                 <p className="card-text">Cal State Long Beach</p>
@@ -23,7 +23,7 @@ const Works = () => {
                     </div>
                     <div className="col">
                         <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                            <Image src="/wheelz4wash.png" className="card-img-top" alt="..." layout='fill' />
+                            <img src="/wheelz4wash.png" className="card-img-top" alt="..." layout='fill' />
                             <div className="card-body">
                                 <h5 className="card-title">Wheelz4Wash</h5>
                                 <p className="card-text">Startup made by 6 friends</p>
@@ -33,7 +33,7 @@ const Works = () => {
                     </div>
                     <div className="col">
                         <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                            <Image src="/htc.png" className="card-img-top" alt="..." layout='fill' />
+                            <img src="/htc.png" className="card-img-top" alt="..." layout='fill' />
                             <div className="card-body">
                                 <h5 className="card-title">HTC</h5>
                                 <p className="card-text">Operations Head</p>
@@ -43,7 +43,7 @@ const Works = () => {
                     </div>
                     <div className="col">
                         <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                            <Image src="/cyient.png" className="card-img-top" alt="..." layout='fill' />
+                            <img src="/cyient.png" className="card-img-top" alt="..." layout='fill' />
                             <div className="card-body">
                                 <h5 className="card-title">Cyient Ltd</h5>
                                 <p className="card-text">My first Company</p>

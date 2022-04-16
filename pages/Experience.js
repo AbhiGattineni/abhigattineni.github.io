@@ -1,5 +1,4 @@
 
-import Image from 'next/image';
 
 const Experience = () => {
     return (
@@ -21,8 +20,8 @@ const Experience = () => {
                             <div className="row">
                                 <div className="col-sm-4">
                                     <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                                        {/* <Image src="/cyient.png" className="card-img-top" alt="..." layout='fill' /> */}
-                                        <Image src="/csulb.jfif" className="card-img-top" alt="..." layout='fill' />
+                                        {/* <img src="/cyient.png" className="card-img-top" alt="..." layout='fill' /> */}
+                                        <img src="/csulb.jfif" className="card-img-top" alt="..." layout='fill' />
                                     </div>
                                 </div>
                                 <div className="col-sm-8">
@@ -48,7 +47,7 @@ const Experience = () => {
                                 </div>
                                 <div className="col-sm-4">
                                     <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                                        <Image src="/cyient.png" className="card-img-top" alt="..." layout='fill' />
+                                        <img src="/cyient.png" className="card-img-top" alt="..." layout='fill' />
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +63,7 @@ const Experience = () => {
                             <div className="row">
                                 <div className="col-sm-4">
                                     <div className='card text-white' style={{ backgroundColor: "#112240" }}>
-                                        <Image src="/htc.png" className="card-img-top" alt="..." height={150} width={100} />
+                                        <img src="/htc.png" className="card-img-top" alt="..." height={150} width={100} />
                                     </div>
                                 </div>
                                 <div className="col-sm-8">
