@@ -7,7 +7,7 @@ const Works = () => {
             <div className="row ms-sm-5 me-sm-5">
                 <div className="col-12 mt-5">
                     <h5 className='fw-normal' style={{ color: "#64ffda", fontSize: "1.6vmax" }}>
-                        03. <small className='fw-bold' style={{ color: '#ccd6f6', fontSize: "2.2vmax" }}>Some Work`&apos;`s Ive Done</small>
+                        03. <small className='fw-bold' style={{ color: '#ccd6f6', fontSize: "2.2vmax" }}>Some Work&apos;s Ive Done</small>
                     </h5>
                 </div>
                 <div className="row row-cols-1 row-cols-md-3 g-4">

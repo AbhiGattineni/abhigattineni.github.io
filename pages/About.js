@@ -24,18 +24,16 @@ const About = () => {
                             </p>
                             <br />
                             <p className='col' style={{ color: "#8892b0" }}>
-                                I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
-                            </p>
-                            <br />
-                            <p className='col' style={{ color: "#8892b0" }}>
-                                Here are a few technologies I’ve been working with recently:
-
-                                JavaScript (ES6+)
-                                TypeScript
-                                React
-                                Eleventy
-                                Node.js
-                                WordPress
+                                Here are a few technologies I’ve been working with recently:<br />
+                                <strong>
+                                    JavaScript (ES6+)<br />
+                                    TypeScript<br />
+                                    React JS<br />
+                                    Node.js<br />
+                                    Tailwind CSS<br />
+                                    Bootstrap CSS<br />
+                                    Python<br />
+                                </strong>
                             </p>
                         </div>
                         <div className='col-md-6 d-none d-md-block m-sm-auto' style={{ height: "40vmax", width: "30vmax" }}>
