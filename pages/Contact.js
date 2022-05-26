@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
+import { BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
 
-const Contact = () => {
+const Contact = ({ refer }) => {
     const router = useRouter()
     return (
-        <div className='container-fluid min-vh-100' style={{ backgroundColor: "#0a192f" }}>
+        <div className='container-fluid min-vh-100' style={{ backgroundColor: "#0a192f" }} ref={refer}>
             <div className="row">
                 <div className="col-sm-4 offset-sm-4 mt-3">
                     <div className="text-center mb-2 mt-5">
@@ -20,6 +21,26 @@ const Contact = () => {
                     </div>
                     <div className="text-center mb-5">
                         <button className="btn btn-outline-light" style={{ color: "#64ffda" }} type="submit" onClick={() => router.push('mailto:')}>Say Hello</button>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                        <div><BsFacebook className='m-3 text-white' size={30} onClick={() =>
+                            window.open(
+                                "https://www.facebook.com/abhi.gattineni/",
+                                "_blank"
+                            )
+                        } /></div>
+                        <div><BsInstagram className='m-3 text-white' size={30} onClick={() =>
+                            window.open(
+                                "https://www.instagram.com/abhigattineni/",
+                                "_blank"
+                            )
+                        } /></div>
+                        <div><BsLinkedin className='m-3 text-white' size={30} onClick={() =>
+                            window.open(
+                                "https://www.linkedin.com/in/abhishek-gattineni-05937088/",
+                                "_blank"
+                            )
+                        } /></div>
                     </div>
                     <div className="align-self-end text-center" style={{ color: "#a8b2d1" }}>
                         <h6 className='fs-6'>Design & Built by Abhi Gattineni</h6>

@@ -1,8 +1,8 @@
 
 
-const Experience = () => {
+const Experience = ({ refer }) => {
     return (
-        <div className='container-fluid min-vh-100' style={{ backgroundColor: "#0a192f" }}>
+        <div className='container-fluid min-vh-100' style={{ backgroundColor: "#0a192f" }} ref={refer}>
             <div className="row ms-sm-5 me-sm-5">
                 <div className="col-12 mt-5">
                     <h5 className='fw-normal' style={{ color: "#64ffda", fontSize: "1.6vmax" }}>

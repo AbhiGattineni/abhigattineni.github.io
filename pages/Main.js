@@ -1,8 +1,8 @@
 
 
-const Main = () => {
+const Main = ({ refer, executeScroll, refs }) => {
     return (
-        <div className='container-fluid pt-5 mt-5' style={{ backgroundColor: "#0a192f", height: "100%" }}>
+        <div className='container-fluid pt-5 mt-5' style={{ backgroundColor: "#0a192f", height: "100%" }} ref={refer}>
             <div className='row mt-sm-5' style={{ marginLeft: "10%" }}>
                 <h6 className='col-12 fs-12 mb-3' style={{ color: "#64ffda" }}>Hi, my name is</h6>
                 <h1 className='col-12 mb-3 fw-bold' style={{ color: "#ccd6f6", fontSize: "5.2vmax" }}>Abhishek Gattineni.</h1>
@@ -12,7 +12,9 @@ const Main = () => {
                         Currently, pursuing masters in Computer Science at California State University Long Beach.
                     </h6>
                 </div>
-                <button className="col-sm-3 col-6 btn btn-outline-light mb-5" style={{ color: "#64ffda" }} type="submit">Checkout my works !</button>
+                <button className="col-sm-3 col-6 btn btn-outline-light mb-5" style={{ color: "#64ffda" }} type="submit" onClick={() => {
+                    executeScroll(refs.worksRef);
+                }}>Checkout my works !</button>
 
             </div>
         </div>

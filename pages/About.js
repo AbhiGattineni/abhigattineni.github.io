@@ -3,9 +3,9 @@ import Image from 'next/image';
 import MyPhoto from '../public/abhidp.jpg';
 
 
-const About = () => {
+const About = ({ refer }) => {
     return (
-        <div className="container-fluid " style={{ backgroundColor: "#0a192f" }}>
+        <div className="container-fluid " style={{ backgroundColor: "#0a192f" }} ref={refer}>
             <div className="row">
                 <div className='col p-sm-5'>
                     <h5 className='fw-normal' style={{ color: "#64ffda", fontSize: "1.6vmax" }}>
