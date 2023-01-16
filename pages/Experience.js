@@ -65,9 +65,9 @@ const Experience = ({ refer }) => {
                     </strong>{" "}
                     I attended California State University, Long Beach where i
                     graduated in 2022. My favorite subject is computer science,
-                    and programming, web design. I chose to obtain his
+                    and programming, web design. I choose to obtain
                     master&apos;s degree at CSULB because the program provided
-                    various research topics that interested him.
+                    various research topics that interested me.
                   </div>
                 </div>
               </div>
