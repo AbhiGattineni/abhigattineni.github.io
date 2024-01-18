@@ -534,25 +534,41 @@ background-color: #64ffda;
   color: #fff;
 }
 
-.image-wrapper {
+
+.img-wrapper {
   position: relative;
   display: inline-block;
-}
-
-.image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #64ffda;
-  opacity: 1; /* Adjust opacity to control the strength of the tint */
-  mix-blend-mode: multiply; /* This blends the tint color with the image */
+  padding: 2px; /* This creates the gap between the image and the first border */
+  background-color: #64ffda; /* This should be the same as the first border color */
 }
 
 .img-fluid {
   display: block;
   width: 100%;
   height: auto;
+  border: 5px solid #64ffda; /* This is the first border */
 }
+#about .div-img-bg {
+  padding-bottom: 30px;
+  border: 20px solid #b8a07e;
+}
+
+#about .div-img-bg .about-img img {
+  width: 100%;
+  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+  margin-top: -60px;
+  margin-left: 40px;
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#about .div-img-bg .about-img img {
+  margin-top: 0%;
+  margin-left: calc(0% - 0px);
+}
+
+
+
+
+
+

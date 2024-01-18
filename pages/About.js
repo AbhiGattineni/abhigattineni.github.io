@@ -23,17 +23,24 @@ const About = ({ refer }) => {
 
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
-            <img src="/abhidp2.jpg" className="img-fluid" alt="" />
+            <div className="img-wrapper">
+              <img src="/abhidp.jpg" className="img-fluid" alt="" />
+            </div>
           </div>
+
           <div
-            className="col-lg-8 pt-4 pt-lg-0 content"
+            className="col-lg-8 pt-4 pt-lg-0 content p-lg-5"
             data-aos="fade-left"
             style={{ color: "#ccd6f6" }}
           >
             <h3>Web &amp; Mobile App Developer</h3>
             <p className="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Developer who is currently working with Wells Fargo as a Software
+              Engineer. I have a passion for developing scalable, responsive and
+              user-friendly web applications. I am a quick learner and a team
+              player who is always ready to learn new technologies and
+              frameworks. I am currently looking for a full-time opportunity as
+              a Software Engineer.
             </p>
             <div className="row">
               <div className="col-lg-6">
@@ -71,15 +78,6 @@ const About = ({ refer }) => {
                 </ul>
               </div>
             </div>
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio
-              vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-              incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-              maxime officiis quidem quia. Sed et consectetur qui quia
-              repellendus itaque neque. Aliquid amet quidem ut quaerat
-              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-              dolores.
-            </p>
           </div>
         </div>
       </div>
