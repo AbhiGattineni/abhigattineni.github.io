@@ -122,14 +122,14 @@ const About = ({ refer }) => {
 
             <div className="progress">
               <span className="skill">
-                JavaScript <i className="val">75%</i>
+                JavaScript <i className="val">90%</i>
               </span>
               <div className="progress-bar-wrap">
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "75%" }}
-                  aria-valuenow="75"
+                  style={{ width: "90%" }}
+                  aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
@@ -140,23 +140,7 @@ const About = ({ refer }) => {
           <div className="col-lg-6">
             <div className="progress">
               <span className="skill">
-                REACT <i className="val">80%</i>
-              </span>
-              <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
-                  role="progressbar"
-                  style={{ width: "80%" }}
-                  aria-valuenow="80"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">
-                WORDPRESS/SHOPIFY <i className="val">90%</i>
+                REACT <i className="val">90%</i>
               </span>
               <div className="progress-bar-wrap">
                 <div
@@ -172,14 +156,30 @@ const About = ({ refer }) => {
 
             <div className="progress">
               <span className="skill">
-                NODE.JS <i className="val">55%</i>
+                WORDPRESS/SHOPIFY <i className="val">70%</i>
               </span>
               <div className="progress-bar-wrap">
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "55%" }}
-                  aria-valuenow="55"
+                  style={{ width: "70%" }}
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+
+            <div className="progress">
+              <span className="skill">
+                NODE.JS <i className="val">90%</i>
+              </span>
+              <div className="progress-bar-wrap">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "90%" }}
+                  aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
@@ -261,36 +261,6 @@ const About = ({ refer }) => {
                 style={{ color: "#4233ff" }}
               ></i>
               <h3>Investments</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <i className="ri-anchor-line" style={{ color: "#b2904f" }}></i>
-              <h3>Dirada Pack</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <i className="ri-disc-line" style={{ color: "#b20969" }}></i>
-              <h3>Moton Ideal</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <i
-                className="ri-base-station-line"
-                style={{ color: "#ff5828" }}
-              ></i>
-              <h3>Verdo Park</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <i
-                className="ri-fingerprint-line"
-                style={{ color: "#29cc61" }}
-              ></i>
-              <h3>Flavor Nivelanda</h3>
             </div>
           </div>
         </div>

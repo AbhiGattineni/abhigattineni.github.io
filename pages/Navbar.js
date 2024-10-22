@@ -44,7 +44,6 @@ const Navbar = ({ executeScroll, refs }) => {
                   executeScroll(refs.aboutRef);
                 }}
               >
-                01.{" "}
                 <small
                   className="fw-normal"
                   style={{ color: "#ccd6f6", fontSize: "1rem" }}
@@ -61,7 +60,6 @@ const Navbar = ({ executeScroll, refs }) => {
                   executeScroll(refs.expRef);
                 }}
               >
-                02.{" "}
                 <small
                   className="fw-normal"
                   style={{ color: "#ccd6f6", fontSize: "1rem" }}
@@ -78,7 +76,6 @@ const Navbar = ({ executeScroll, refs }) => {
                   executeScroll(refs.worksRef);
                 }}
               >
-                03.{" "}
                 <small
                   className="fw-normal"
                   style={{ color: "#ccd6f6", fontSize: "1rem" }}
@@ -95,7 +92,6 @@ const Navbar = ({ executeScroll, refs }) => {
                   executeScroll(refs.contactRef);
                 }}
               >
-                04.{" "}
                 <small
                   className="fw-normal"
                   style={{ color: "#ccd6f6", fontSize: "1rem" }}
@@ -110,7 +106,7 @@ const Navbar = ({ executeScroll, refs }) => {
                 style={{ color: "#64ffda" }}
                 type="submit"
                 onClick={() => {
-                  window.open("./AG_Resume.pdf", "_blank");
+                  window.open("./Resume.pdf", "_blank");
                   setOpen(!isOpen);
                 }}
               >
