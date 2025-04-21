@@ -35,7 +35,7 @@ const About = ({ refer }) => {
           >
             <h3>Web &amp; Mobile App Developer</h3>
             <p className="fst-italic">
-              Developer who is currently working with Wells Fargo as a Software
+              Developer who is currently working with C3.AI & FRACTAL.AI as a Software
               Engineer. I have a passion for developing scalable, responsive and
               user-friendly web applications. I am a quick learner and a team
               player who is always ready to learn new technologies and
@@ -90,7 +90,7 @@ const About = ({ refer }) => {
           <div className="col-lg-6">
             <div className="progress">
               <span className="skill">
-                HTML <i className="val">100%</i>
+                REACT JS <i className="val">100%</i>
               </span>
               <div className="progress-bar-wrap">
                 <div
@@ -135,12 +135,42 @@ const About = ({ refer }) => {
                 ></div>
               </div>
             </div>
+            <div className="progress">
+              <span className="skill">
+                DJANGO, FAST API <i className="val">90%</i>
+              </span>
+              <div className="progress-bar-wrap">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "90%" }}
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div className="progress">
+              <span className="skill">
+                AWS <i className="val">70%</i>
+              </span>
+              <div className="progress-bar-wrap">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "70%" }}
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
           </div>
 
           <div className="col-lg-6">
             <div className="progress">
               <span className="skill">
-                REACT <i className="val">90%</i>
+                NODE JS <i className="val">90%</i>
               </span>
               <div className="progress-bar-wrap">
                 <div
@@ -185,6 +215,37 @@ const About = ({ refer }) => {
                 ></div>
               </div>
             </div>
+            <div className="progress">
+              <span className="skill">
+                SQL/ NO SQL <i className="val">90%</i>
+              </span>
+              <div className="progress-bar-wrap">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "90%" }}
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            <div className="progress">
+              <span className="skill">
+                REST API/ GRAPH QL <i className="val">90%</i>
+              </span>
+              <div className="progress-bar-wrap">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: "90%" }}
+                  aria-valuenow="90"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
