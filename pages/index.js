@@ -9,6 +9,7 @@ import Experience from "./Experience";
 import Main from "./Main";
 import Navbar from "./Navbar";
 import Works from "./Works";
+import { initScrollAnimations } from "../utils/animations";
 
 export default function Home() {
   const mainRef = useRef(null);
@@ -22,8 +23,11 @@ export default function Home() {
   const executeScroll = (componentRef) => {
     componentRef.current.scrollIntoView({ behavior: "smooth" });
   };
+  
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    // Initialize scroll animations
+    initScrollAnimations();
   }, []);
   return (
     <div className={styles.container}>

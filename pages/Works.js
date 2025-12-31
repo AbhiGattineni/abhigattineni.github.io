@@ -1,4 +1,30 @@
+import { useEffect, useRef } from "react";
+
 const Works = ({ refer }) => {
+    const projectsRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add("visible");
+                        }, index * 100);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const cards = document.querySelectorAll(".project-card");
+        cards.forEach(card => observer.observe(card));
+
+        return () => {
+            cards.forEach(card => observer.unobserve(card));
+        };
+    }, []);
+
     const projects = [
         {
             title: "Word Highlighter",
@@ -64,7 +90,7 @@ const Works = ({ refer }) => {
         >
             <div className="container">
                 <div className="row">
-                    <div className="col-12 mb-5">
+                    <div className="col-12 mb-5 fade-in-on-scroll">
                         <h5 className='fw-normal' style={{ color: "#64ffda", fontSize: "1.6vmax" }}>
                             03. <small className='fw-bold' style={{ color: '#ccd6f6', fontSize: "2.2vmax" }}>Some Work&apos;s Ive Done</small>
                         </h5>
@@ -74,12 +100,13 @@ const Works = ({ refer }) => {
                     {projects.map((project, index) => (
                         <div className="col" key={index}>
                             <div 
-                                className='card text-white h-100' 
+                                className='card text-white h-100 project-card scale-in-on-scroll' 
                                 style={{ 
                                     backgroundColor: "#112240",
                                     border: "1px solid rgba(100, 255, 218, 0.1)",
                                     transition: "all 0.3s ease",
-                                    cursor: "pointer"
+                                    cursor: "pointer",
+                                    animationDelay: `${index * 0.1}s`
                                 }}
                                 onMouseEnter={(e) => {
                                     e.currentTarget.style.transform = "translateY(-5px)";

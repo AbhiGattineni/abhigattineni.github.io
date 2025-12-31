@@ -1,8 +1,47 @@
 import Image from "next/image";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiBootstrap } from "react-icons/si";
+import { useEffect, useRef } from "react";
 
 const About = ({ refer }) => {
+  const imageRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Animate progress bars when skills section is visible
+            if (entry.target.classList.contains("skills")) {
+              const progressBars = entry.target.querySelectorAll(".progress-bar");
+              progressBars.forEach((bar, index) => {
+                setTimeout(() => {
+                  const targetWidth = bar.style.getPropertyValue("--target-width") || "0%";
+                  bar.style.width = targetWidth;
+                }, index * 100);
+              });
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imageRef.current) observer.observe(imageRef.current);
+    if (contentRef.current) observer.observe(contentRef.current);
+    
+    const skillsSection = document.querySelector(".skills");
+    if (skillsSection) observer.observe(skillsSection);
+
+    return () => {
+      if (imageRef.current) observer.unobserve(imageRef.current);
+      if (contentRef.current) observer.unobserve(contentRef.current);
+      if (skillsSection) observer.unobserve(skillsSection);
+    };
+  }, []);
+
   return (
     <section
       id="about"
@@ -12,26 +51,41 @@ const About = ({ refer }) => {
         background: "linear-gradient(45deg, #0a192f, #020c1b)",
         paddingBottom: "5rem",
         paddingTop: "5rem",
+        overflow: "hidden",
+        width: "100%",
       }}
       ref={refer}
     >
       <div className="about-me container">
-        <div className="section-title">
+        <div className="section-title fade-in-on-scroll">
           <h2>About</h2>
           <p style={{ color: "#ccd6f6" }}>Learn more about me</p>
         </div>
 
         <div className="row">
-          <div className="col-lg-4" data-aos="fade-right">
-            <div className="img-wrapper">
-              <img src="/abhidp.jpg" className="img-fluid" alt="" />
+          <div className="col-lg-4" ref={imageRef}>
+            <div className="img-wrapper slide-in-left" style={{ animationDelay: "0.2s" }}>
+              <img 
+                src="/abhidp.jpg" 
+                className="img-fluid" 
+                alt="" 
+                style={{
+                  transition: "transform 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "scale(1.05)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "scale(1)";
+                }}
+              />
             </div>
           </div>
 
           <div
-            className="col-lg-8 pt-4 pt-lg-0 content p-lg-5"
-            data-aos="fade-left"
-            style={{ color: "#ccd6f6" }}
+            ref={contentRef}
+            className="col-lg-8 pt-4 pt-lg-0 content p-lg-5 slide-in-right"
+            style={{ color: "#ccd6f6", animationDelay: "0.4s" }}
           >
             <h3>Web &amp; Mobile App Developer</h3>
             <p className="fst-italic">
@@ -45,10 +99,6 @@ const About = ({ refer }) => {
             <div className="row">
               <div className="col-lg-6">
                 <ul>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>{" "}
-                    <strong>Birthday:</strong> <span>5 Aug 1996</span>
-                  </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <strong>Phone:</strong> <span>+1 562-542-7985</span>
@@ -82,13 +132,13 @@ const About = ({ refer }) => {
         </div>
       </div>
       <div className="skills container" style={{ paddingTop: "3rem" }}>
-        <div className="section-title">
+        <div className="section-title fade-in-on-scroll">
           <h2>Skills</h2>
         </div>
 
         <div className="row skills-content">
           <div className="col-lg-6">
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.1s" }}>
               <span className="skill">
                 REACT JS <i className="val">100%</i>
               </span>
@@ -96,7 +146,7 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "100%" }}
+                  style={{ width: "0%", "--target-width": "100%" }}
                   aria-valuenow="100"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -104,14 +154,14 @@ const About = ({ refer }) => {
               </div>
             </div>
 
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.2s" }}>
               <span className="skill">
                 CSS <i className="val">90%</i>
               </span>
               <div className="progress-bar-wrap">
                 <div
                   className="progress-bar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   role="progressbar"
                   aria-valuenow="90"
                   aria-valuemin="0"
@@ -120,7 +170,7 @@ const About = ({ refer }) => {
               </div>
             </div>
 
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.3s" }}>
               <span className="skill">
                 JavaScript <i className="val">90%</i>
               </span>
@@ -128,14 +178,14 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
               </div>
             </div>
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.4s" }}>
               <span className="skill">
                 DJANGO, FAST API <i className="val">90%</i>
               </span>
@@ -143,14 +193,14 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
               </div>
             </div>
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.5s" }}>
               <span className="skill">
                 AWS <i className="val">70%</i>
               </span>
@@ -158,7 +208,7 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "70%" }}
+                  style={{ width: "0%", "--target-width": "70%" }}
                   aria-valuenow="70"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -168,7 +218,7 @@ const About = ({ refer }) => {
           </div>
 
           <div className="col-lg-6">
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.1s" }}>
               <span className="skill">
                 NODE JS <i className="val">90%</i>
               </span>
@@ -176,7 +226,7 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -184,7 +234,7 @@ const About = ({ refer }) => {
               </div>
             </div>
 
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.2s" }}>
               <span className="skill">
                 WORDPRESS/SHOPIFY <i className="val">70%</i>
               </span>
@@ -192,7 +242,7 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "70%" }}
+                  style={{ width: "0%", "--target-width": "70%" }}
                   aria-valuenow="70"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -200,7 +250,7 @@ const About = ({ refer }) => {
               </div>
             </div>
 
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.3s" }}>
               <span className="skill">
                 NODE.JS <i className="val">90%</i>
               </span>
@@ -208,14 +258,14 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
               </div>
             </div>
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.4s" }}>
               <span className="skill">
                 SQL/ NO SQL <i className="val">90%</i>
               </span>
@@ -223,14 +273,14 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
               </div>
             </div>
-            <div className="progress">
+            <div className="progress fade-in-on-scroll" style={{ animationDelay: "0.5s" }}>
               <span className="skill">
                 REST API/ GRAPH QL <i className="val">90%</i>
               </span>
@@ -238,7 +288,7 @@ const About = ({ refer }) => {
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "90%" }}
+                  style={{ width: "0%", "--target-width": "90%" }}
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
@@ -249,20 +299,20 @@ const About = ({ refer }) => {
           </div>
         </div>
       </div>
-      <div className="interests container" style={{ paddingTop: "3rem" }}>
+      <div className="interests container fade-in-on-scroll" style={{ paddingTop: "3rem" }}>
         <div className="section-title">
           <h2>Interests</h2>
         </div>
 
         <div className="row">
           <div className="col-lg-3 col-md-4">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.1s" }}>
               <i className="ri-store-line" style={{ color: "#ffbb2c" }}></i>
               <h3>Programming</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.2s" }}>
               <i
                 className="ri-bar-chart-box-line"
                 style={{ color: "#5578ff" }}
@@ -271,7 +321,7 @@ const About = ({ refer }) => {
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.3s" }}>
               <i
                 className="ri-calendar-todo-line"
                 style={{ color: "#e80368" }}
@@ -280,7 +330,7 @@ const About = ({ refer }) => {
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.4s" }}>
               <i
                 className="ri-paint-brush-line"
                 style={{ color: "#e361ff" }}
@@ -289,7 +339,7 @@ const About = ({ refer }) => {
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.5s" }}>
               <i
                 className="ri-database-2-line"
                 style={{ color: "#47aeff" }}
@@ -298,7 +348,7 @@ const About = ({ refer }) => {
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.6s" }}>
               <i
                 className="ri-gradienter-line"
                 style={{ color: "#ffa76e" }}
@@ -307,7 +357,7 @@ const About = ({ refer }) => {
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.7s" }}>
               <i
                 className="ri-file-list-3-line"
                 style={{ color: "#11dbcf" }}
@@ -316,7 +366,7 @@ const About = ({ refer }) => {
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
+            <div className="icon-box scale-in-on-scroll" style={{ animationDelay: "0.8s" }}>
               <i
                 className="ri-price-tag-2-line"
                 style={{ color: "#4233ff" }}
