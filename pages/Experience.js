@@ -42,13 +42,6 @@ const Experience = ({ refer }) => {
       img: "/wheelz4wash.png",
     },
     {
-      year: "2021",
-      title: "Anddhen Group",
-      description:
-        "Joined the Anddhen Group to develop internal business management solutions that streamlined day-to-day operations. Worked closely with business analysts to identify inefficiencies and implemented technical solutions that improved overall productivity. Leveraged technologies such as React, Node.js, and MongoDB to build systems that helped automate key processes. My work here focused on creating scalable, maintainable software systems that were integral to the group’s operations.",
-      img: "/loading.png",
-    },
-    {
       month: "1.5 Years",
       year: "2021",
       title: "Masters in California State University, Long Beach",

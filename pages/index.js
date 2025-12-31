@@ -36,7 +36,7 @@ export default function Home() {
       <Main executeScroll={executeScroll} refs={ref} refer={mainRef} />
       <About refer={aboutRef} />
       <Experience refer={expRef} />
-      {/* <Works refer={worksRef} /> */}
+      <Works refer={worksRef} />
       <Contact refer={contactRef} />
     </div>
   );
