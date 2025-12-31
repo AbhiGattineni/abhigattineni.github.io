@@ -135,7 +135,7 @@ const Main = ({ refer, executeScroll, refs }) => {
                 animationDelay: "0.8s"
               }}
             >
-              I'm a software engineer specializing in building exceptional
+              I&apos;m a software engineer specializing in building exceptional
               digital experiences.
             </p>
             <button

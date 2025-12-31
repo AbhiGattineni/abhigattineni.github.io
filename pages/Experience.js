@@ -113,9 +113,10 @@ const Experience = ({ refer }) => {
                     className="m-3"
                     style={{ maxWidth: "500px", maxHeight: "500px" }}
                   >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.img}
-                      alt=""
+                      alt={item.title}
                       style={{
                         width: "100%",
                         height: "100%",

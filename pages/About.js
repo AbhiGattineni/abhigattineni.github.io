@@ -8,6 +8,10 @@ const About = ({ refer }) => {
   const contentRef = useRef(null);
 
   useEffect(() => {
+    const imageNode = imageRef.current;
+    const contentNode = contentRef.current;
+    const skillsSection = document.querySelector(".skills");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -29,15 +33,13 @@ const About = ({ refer }) => {
       { threshold: 0.1 }
     );
 
-    if (imageRef.current) observer.observe(imageRef.current);
-    if (contentRef.current) observer.observe(contentRef.current);
-    
-    const skillsSection = document.querySelector(".skills");
+    if (imageNode) observer.observe(imageNode);
+    if (contentNode) observer.observe(contentNode);
     if (skillsSection) observer.observe(skillsSection);
 
     return () => {
-      if (imageRef.current) observer.unobserve(imageRef.current);
-      if (contentRef.current) observer.unobserve(contentRef.current);
+      if (imageNode) observer.unobserve(imageNode);
+      if (contentNode) observer.unobserve(contentNode);
       if (skillsSection) observer.unobserve(skillsSection);
     };
   }, []);
@@ -65,10 +67,11 @@ const About = ({ refer }) => {
         <div className="row">
           <div className="col-lg-4" ref={imageRef}>
             <div className="img-wrapper slide-in-left" style={{ animationDelay: "0.2s" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img 
                 src="/abhidp.jpg" 
                 className="img-fluid" 
-                alt="" 
+                alt="Abhishek Gattineni" 
                 style={{
                   transition: "transform 0.3s ease",
                 }}
