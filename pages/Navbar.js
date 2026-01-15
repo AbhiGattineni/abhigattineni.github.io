@@ -100,7 +100,7 @@ const Navbar = ({ executeScroll, refs }) => {
                 </small>
               </h5>
             </li>
-            <li className="nav-item ms-2">
+            {/* <li className="nav-item ms-2">
               <button
                 className="btn btn-outline-light"
                 style={{ color: "#64ffda" }}
@@ -112,7 +112,7 @@ const Navbar = ({ executeScroll, refs }) => {
               >
                 Resume
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
